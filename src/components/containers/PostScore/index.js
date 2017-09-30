@@ -1,5 +1,4 @@
 import  React,  { Component } from 'react'
-import axios from 'axios';
 import {connect} from 'react-redux';
 import {voteOnPost} from '../../../actions/posts';
 import {voteOnComment} from   '../../../actions/comments';

@@ -1,9 +1,8 @@
 import React from 'react';
-import PostScore from '../../containers/PostScore/index';
+import {Link} from 'react-router-dom';
 
 const CommentView = props => {
-    const {comment,deleteComment,editComment} = props;
-    console.log(props);
+    const {comment,deleteComment} = props;
     return (
         <div>
         {comment.body}
@@ -12,9 +11,9 @@ const CommentView = props => {
         <br/>
         score: {comment.voteScore}
         <br/>
-        <a href="#" onClick={e => editComment(e,comment)}>Edit</a>
+        <Link to={`/magicmadeuppath/${comment.id}/editing`}>Edit</Link>
         <br/>
-        <a href="#" onClick={ e => deleteComment(e,comment.id) }>Delete</a>
+        <a  onClick={ e => deleteComment(e,comment.id) }>Delete</a>
         </div>
     )
 };

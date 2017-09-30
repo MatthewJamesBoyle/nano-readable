@@ -6,12 +6,13 @@ class EditCommentView extends Component {
         super(props);
         const {comment} = this.props
         this.state = {
+            id: comment.id,
             body: comment.body,
         };
     }
 
     render() {
-    const {post,onEditPressed} = this.props;
+    const {onEditPressed} = this.props;
       return(
         <div>
         <h1>Edit Comment</h1>
@@ -27,11 +28,9 @@ class EditCommentView extends Component {
 }
 
 handleChange = (event) => {
-    const target = event.target;
-    const name = target.name;
     const value = event.target.value;
     this.setState({
-        [name]: value,
+        body: value,
         })     
     }
 }

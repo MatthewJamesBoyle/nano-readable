@@ -1,7 +1,5 @@
 import  React,  { Component } from 'react';
-import axios from 'axios';
 import {fetchCategories} from '../../../actions/categories';
-import {filterPostsByCategory} from '../../../actions/posts'
 import {connect} from 'react-redux';
 import {withRouter} from 'react-router-dom';
 import CatView from '../../presenters/CatView/index';

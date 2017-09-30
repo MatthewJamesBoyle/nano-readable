@@ -65,7 +65,6 @@ export const deletePost =  (postId)  => dispatch => {
 }
 
 export const filterPostsByCategory = catName => dispatch => {
-    console.log(catName);
     return API.filterPostsByCategory(catName)
         .then(response => dispatch(filterPosts(response.data)))
 }
@@ -137,7 +136,7 @@ export const setCurrentPost = postId => dispatch => {
     dispatch(currentPostRequested())
     return API.fetchCurrentPost(postId)
             .then(response =>  dispatch(currentPost(response.data)))
-            .then(() => dispatch(currentPostRecieved))
+            .then(() => dispatch(currentPostRecieved()))
 }
 
 export const updatePost = post => dispatch => {

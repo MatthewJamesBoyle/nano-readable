@@ -50,16 +50,6 @@ export const updatePost = post => {
     return axios.put(`${API_URL}/posts/${post.id}`,postToUpdate,{headers});
 }
 
-export const editPost = post => {
-    return fetch(`${API_URL}/${post.id}`, {
-        headers,
-        method: 'PUT',
-        body: JSON.stringify({
-            title: post.title,
-            body: post.body
-        })
-    })
-}
 
 export const deletePost = postId => {    
     return axios.delete(`${API_URL}/posts/${postId}`, {headers} );
@@ -75,6 +65,7 @@ export const addComment = comment => {
 
 
 export const editComment = comment => {
+    console.log(comment);
    
     const commentToUpdate = {
         timestamp: Date.now(),

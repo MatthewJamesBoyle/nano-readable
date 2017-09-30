@@ -2,13 +2,12 @@ import  React, { Component } from 'react';
 import Categories  from '../Categories/index';
 import Post from '../Post/index';
 import { connect } from 'react-redux';
-import {fetchPosts, vote, sortPostsBy} from '../../../actions/posts';
-import {withRouter,Route,Link } from 'react-router-dom';
+import {fetchPosts, sortPostsBy} from '../../../actions/posts';
+import {withRouter,Route } from 'react-router-dom';
 import PostDetail from '../PostDetail/index';
 import FilteredContainer from '../FilteredContainer/index';
 import EditPost from '../EditPost/index';
 import EditComment from '../EditComment/index';
-import sortBy from 'sort-by';
 
 class Root extends Component {
   componentDidMount() {
@@ -26,9 +25,9 @@ class Root extends Component {
                   </div>
                 <div className="sortSection">
                   <div> sort by: 
-                      <a href="#" onClick={e => this.sortPosts(e,'timestamp')}> Date</a>  
-                      <a href="#" onClick={e => this.sortPosts(e,'title')}> Title</a>  
-                      <a href="#" onClick={e => this.sortPosts(e,'voteScore')}> Score</a>    
+                      <a onClick={e => this.sortPosts(e,'timestamp')}> Date</a>  
+                      <a onClick={e => this.sortPosts(e,'title')}> Title</a>  
+                      <a onClick={e => this.sortPosts(e,'voteScore')}> Score</a>    
                       </div>
                 </div>
                 <div className="categorySection">
@@ -49,7 +48,7 @@ class Root extends Component {
           <Route exact path ={"/post/:postId/edit"} render={(props) => (
             <EditPost  {...props}/>
           )} />
-          <Route exact path ={"/comment/:commentId/edit"} render={(props) => (
+          <Route exact path ={"/magicmadeuppath/:commentId/editing"} render={(props) => (
             <EditComment  {...props}/>
           )} />
 

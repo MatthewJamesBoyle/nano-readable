@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
 import {connect} from 'react-redux';
-import { fetchComments, addNewComment, editComment,deleteComment } from '../../../actions/comments';
+import { fetchComments, addNewComment,deleteComment } from '../../../actions/comments';
 import  CommentView from '../../presenters/CommentView/index'
-import axios from 'axios';
 import PostScore from '../../containers/PostScore/index';
 import AddCommentView from '../../presenters/AddCommentView/index'
 import uuid from 'uuid';

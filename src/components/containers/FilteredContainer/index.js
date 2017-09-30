@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import {connect} from 'react-redux';
 import {filterPostsByCategory} from '../../../actions/posts'
 import Post from '../../containers/Post/index';
-import {withRouter} from 'react-router-dom';
+import {Link,withRouter} from 'react-router-dom';
 
 class FilteredContainer extends Component {
     componentDidMount() {
@@ -13,7 +13,10 @@ class FilteredContainer extends Component {
     }
     render(){
         return (
-            <Post posts={this.props.posts.allPosts}/>
+            <div>
+                <Link to="/">Home</Link>
+                <Post posts={this.props.posts.allPosts}/>
+            </div>
         )
 }
 }

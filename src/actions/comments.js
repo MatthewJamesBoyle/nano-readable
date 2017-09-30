@@ -21,14 +21,6 @@ export const CURRENT_COMMENT = 'CURRENT_COMMENT';
         }
     }
 
-export function removeComment(postId, commentToDelete ) { 
-        return {
-            type: DELETE_COMMENT,
-            postId,
-            comment: commentToDelete,
-        } 
-    }
-
 function commentsRequested() {
     return {
         type: COMMENTS_REQUESTED,
@@ -109,7 +101,7 @@ export const fetchComments = (postId) => dispatch => {
         dispatch(commentsRequested())
         return API.fetchCurrentComment(commentId)
                 .then(response =>  dispatch(currentComment(response.data)))
-                .then(() => dispatch(commentsReceived))
+                .then(() => dispatch(commentsReceived()))
     }
 
 

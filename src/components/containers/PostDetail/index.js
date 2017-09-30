@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import {connect} from 'react-redux';
 import {setCurrentPost} from '../../../actions/posts';
 import PostDetailView from '../../presenters/PostDetailView/index';
-import axios from 'axios';
+import {withRouter} from 'react-router-dom';
 
 
 class PostDetail extends Component {
@@ -25,4 +25,4 @@ class PostDetail extends Component {
     } 
   }
 
-  export default connect(mapStateToProps)(PostDetail);
+  export default withRouter(connect(mapStateToProps)(PostDetail));

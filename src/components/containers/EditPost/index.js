@@ -6,8 +6,8 @@ import {setCurrentPost,updatePost} from '../../../actions/posts';
 class EditPost extends Component {
     componentDidMount() {
         const {postId} = this.props.match.params;
-        const {dispatch,posts} = this.props;
-        this.props.dispatch(setCurrentPost(postId));
+        const {dispatch} = this.props;
+        dispatch(setCurrentPost(postId));
     }
     
     

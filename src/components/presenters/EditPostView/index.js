@@ -1,4 +1,5 @@
 import React,{Component} from 'react';
+import {Link} from 'react-router-dom';
 
 class EditPostView extends Component { 
    
@@ -15,9 +16,10 @@ class EditPostView extends Component {
     }
 
     render() {
-    const {post,onEditPressed} = this.props;
+    const {onEditPressed} = this.props;
       return(
         <div>
+        <Link to="/">Home</Link>
         <h1>Edit Post</h1>
         <form onSubmit={e => onEditPressed(e,this.state)}>
                     <label>

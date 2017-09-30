@@ -17,7 +17,7 @@ const {timeposted,onDeletePressed} = props;
             <div className="postTime"> Posted at: {timeposted}</div>  
             <CommentSection postId={post.id} commentFlag={true}/>       
                 <div>
-                  <Link to={`/${post.category}/${post.id}/edit`}>Edit</Link>  
+                  <Link to={`/post/${post.id}/edit`}>Edit</Link>  
                   <br/> 
                   <a  href="" onClick={(e) => onDeletePressed(e,post.id)}>delete</a>
                 </div>       

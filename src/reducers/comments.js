@@ -23,7 +23,7 @@ export default function comments(state = initialState, action) {
 
             const newAC =  state.allComments.map(post => {
                 if(post.postId === postId) {
-                    post.comments = [...post.comments, comment],
+                    post.comments = [...post.comments, comment];
                     post.commentCount+=1;
                 }
 

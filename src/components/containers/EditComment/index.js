@@ -6,8 +6,8 @@ import {editComment,setCurrentComment} from '../../../actions/comments';
 class EditComment extends Component {
     componentDidMount() {
         const {commentId} = this.props.match.params;
-        const {dispatch,comments} = this.props;
-        this.props.dispatch(setCurrentComment(commentId));   
+        const {dispatch} = this.props;
+        dispatch(setCurrentComment(commentId));   
     }
     
     
