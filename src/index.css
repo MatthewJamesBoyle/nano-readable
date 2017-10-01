@@ -30,12 +30,18 @@ body {
 }
 
 .postTitle {
-  font-size: 1.3rem;
+  font-size: 1.2rem;
   font-weight: bold;
   width:70%;
 }
 a:link {
  text-decoration: none;
+ color: rgb(0, 188, 212);
+}
+
+a:visited {
+  text-decoration: none;
+  color:rgb(255, 64, 129);
 }
 
 .postBody {
@@ -79,4 +85,8 @@ margin-top: 0.7rem;
 .EditAndDeleteButtons{
   margin-left: 50rem;
   width:700%;
+}
+
+.addSection{
+  margin-left: 5rem;
 }

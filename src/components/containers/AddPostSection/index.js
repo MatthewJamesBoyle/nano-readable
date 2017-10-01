@@ -2,6 +2,9 @@ import React, {Component} from 'react';
 import {connect} from 'react-redux';
 import {newPost} from '../../../actions/posts';
 import uuid from 'uuid';
+import TextField from 'material-ui/TextField';
+
+
 
  class AddPostForm extends Component {
     constructor(props) {
@@ -20,19 +23,19 @@ import uuid from 'uuid';
                 <form onSubmit={this.handleSubmit}>
                     <label>
                         Title:
-                        <input type="text" name="title" value={this.state.title} onChange={this.handleChange} />
+                        <TextField type="text" name="title" value={this.state.title} onChange={this.handleChange} />
                     </label>
                     <label>
                         Body:
-                        <textarea rows="4" cols="50" name="body" value={this.state.body} onChange={this.handleChange} />
+                        <TextField rows={4} multiLine={true} name="body" value={this.state.body} onChange={this.handleChange} />
                     </label>
                     <label>
                         Author:
-                        <input type="text" name="author" value={this.state.author} onChange={this.handleChange} />
+                        <TextField type="text" name="author" value={this.state.author} onChange={this.handleChange} />
                     </label>
                     <label>
                         Category:
-                        <input type="text" name="category" value={this.state.category} onChange={this.handleChange} />
+                        <TextField type="text" name="category" value={this.state.category} onChange={this.handleChange} />
                     </label>
                     <button>Add a post</button>
                 </form>
