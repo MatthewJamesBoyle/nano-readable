@@ -37,7 +37,10 @@ export default function posts(state = intialPostState , action) {
             const { post } = action;
           return {
               ...state,
-              allPosts: [...state.allPosts,post], 
+              allPosts: [...state.allPosts,{
+                  ...post,
+                  voteScore: 0,
+              }], 
           }
         
         case REMOVE_POST : 

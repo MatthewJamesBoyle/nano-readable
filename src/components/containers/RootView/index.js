@@ -19,20 +19,18 @@ class Root extends Component {
           <div className="app">
             <Route exact path="/" render={({history})=>  
                <div>
-
+               <Categories/>
                   <div className="topBar"> 
                     <div className="title">MatterNews</div>
-                  </div>
-                <div className="sortSection">
-                  <div> sort by: 
-                      <a onClick={e => this.sortPosts(e,'timestamp')}> Date</a>  
-                      <a onClick={e => this.sortPosts(e,'title')}> Title</a>  
-                      <a onClick={e => this.sortPosts(e,'voteScore')}> Score</a>    
+                    <div className="sortSection">
+                      <div className="categoryTinyFont"> Sort by: 
+                        <a onClick={e => this.sortPosts(e,'timestamp')}> Date</a>  
+                        <a onClick={e => this.sortPosts(e,'title')}> Title</a>  
+                        <a onClick={e => this.sortPosts(e,'voteScore')}> Score</a>    
                       </div>
                 </div>
-                <div className="categorySection">
-                    <Categories/>
-                </div>
+                  </div>
+                
               {!posts.isFetching ? 
                  <Post posts={posts.allPosts}/> :
                  <div>Loading posts from API...</div>

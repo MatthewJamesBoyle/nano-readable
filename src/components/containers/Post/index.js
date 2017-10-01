@@ -12,7 +12,6 @@ import {withRouter } from 'react-router-dom';
     const {posts} = this.props;
            return ( 
            <div className="postsRoot">
-                <h1> Posts</h1>
                 <div className="cards">
                 {
                     posts.map( post =>  

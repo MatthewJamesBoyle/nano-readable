@@ -13,11 +13,11 @@ import CatView from '../../presenters/CatView/index';
     const {categories} = this.props;
        return ( 
            <div className="categoriesRoot">
-           <h1>Categories</h1>
+           <h3 className="categoryTinyFont">Categories</h3>
            {categories.length ? 
             (
                 categories.map( category => ( 
-                   <CatView key={category.name} data ={category}/>
+                   <CatView  key={category.name} data ={category}/>
                     )
                 )
             ):( 
