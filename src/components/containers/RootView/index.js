@@ -8,6 +8,9 @@ import PostDetail from '../PostDetail/index';
 import FilteredContainer from '../FilteredContainer/index';
 import EditPost from '../EditPost/index';
 import EditComment from '../EditComment/index';
+import AppBar from 'material-ui/AppBar';
+
+
 
 class Root extends Component {
   componentDidMount() {
@@ -20,16 +23,15 @@ class Root extends Component {
             <Route exact path="/" render={({history})=>  
                <div>
                <Categories/>
-                  <div className="topBar"> 
-                    <div className="title">MatterNews</div>
+                  <AppBar title="Matternews" > 
                     <div className="sortSection">
-                      <div className="categoryTinyFont"> Sort by: 
+                      <div className="materialClone"> Sort by: 
                         <a onClick={e => this.sortPosts(e,'timestamp')}> Date</a>  
                         <a onClick={e => this.sortPosts(e,'title')}> Title</a>  
                         <a onClick={e => this.sortPosts(e,'voteScore')}> Score</a>    
                       </div>
                 </div>
-                  </div>
+                  </AppBar>
                 
               {!posts.isFetching ? 
                  <Post posts={posts.allPosts}/> :

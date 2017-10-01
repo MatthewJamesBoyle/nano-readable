@@ -58,7 +58,7 @@ a:visited {
 }
 
 .sortSection {
-margin-right: 3rem;
+margin-right: 0.5rem;
 }
 
 .categoriesRoot {
@@ -89,4 +89,12 @@ margin-top: 0.7rem;
 
 .addSection{
   margin-left: 5rem;
+}
+
+.materialClone{
+  font-weight: 400;
+  font-size: 18px;
+  color: rgb(255, 255, 255);
+  line-height: 64px;
+
 }
