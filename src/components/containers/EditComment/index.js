@@ -12,8 +12,8 @@ class EditComment extends Component {
     
     
     render() {  
-        const {comments} = this.props;  
-        { if(comments.isFetching  === false )
+        const {comments} = this.props;
+        { if(comments.isFetching  === false && comments.currentComment )
             return (
             <EditCommentView comment={comments.currentComment} onEditPressed={this.editSubmitted}/>
             )

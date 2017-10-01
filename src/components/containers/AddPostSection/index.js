@@ -8,7 +8,7 @@ import uuid from 'uuid';
         super(props);
         this.state = {
             title:'',
-            post:'',
+            body:'',
             author:'',
             category:'',
             valid:false,
@@ -23,8 +23,8 @@ import uuid from 'uuid';
                         <input type="text" name="title" value={this.state.title} onChange={this.handleChange} />
                     </label>
                     <label>
-                        Post:
-                        <textarea rows="4" cols="50" name="post" value={this.state.post} onChange={this.handleChange} />
+                        Body:
+                        <textarea rows="4" cols="50" name="body" value={this.state.body} onChange={this.handleChange} />
                     </label>
                     <label>
                         Author:

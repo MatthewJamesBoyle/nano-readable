@@ -4,7 +4,7 @@ class EditCommentView extends Component {
    
     constructor(props) {
         super(props);
-        const {comment} = this.props
+        const {comment} = this.props;
         this.state = {
             id: comment.id,
             body: comment.body,

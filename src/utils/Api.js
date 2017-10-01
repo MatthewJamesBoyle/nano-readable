@@ -64,9 +64,7 @@ export const addComment = comment => {
 }
 
 
-export const editComment = comment => {
-    console.log(comment);
-   
+export const editComment = comment => {   
     const commentToUpdate = {
         timestamp: Date.now(),
         body: comment.body,

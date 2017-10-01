@@ -90,19 +90,6 @@ function removePost (postId) {
     }
 }
 
-function currentPostRequested () {
-    return {
-        type: CURRENT_POST_REQUESTED,
-    }
-}
-
-function currentPostRecieved () {
-    return {
-        type: currentPostRecieved,
-    }
-}
-
-
 export const voteOnPost = (id,type) => dispatch => {
     API.updatePostScore(id,type)
         .then(response => {
@@ -133,10 +120,10 @@ function editPost(post) {
 }
 
 export const setCurrentPost = postId => dispatch => {
-    dispatch(currentPostRequested())
+    dispatch(postRequested())
     return API.fetchCurrentPost(postId)
             .then(response =>  dispatch(currentPost(response.data)))
-            .then(() => dispatch(currentPostRecieved()))
+            .then(() => dispatch(postsRecieived()))
 }
 
 export const updatePost = post => dispatch => {
