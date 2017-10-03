@@ -3,6 +3,7 @@ import {connect} from 'react-redux';
 import {voteOnPost} from '../../../actions/posts';
 import {voteOnComment} from   '../../../actions/comments';
 import FlatButton from 'material-ui/FlatButton';
+import {withRouter} from 'react-router-dom';
 
 
  class PostScore extends Component {
@@ -19,4 +20,4 @@ import FlatButton from 'material-ui/FlatButton';
     }
 }
 
-export default connect()(PostScore);
+export default withRouter(connect()(PostScore));

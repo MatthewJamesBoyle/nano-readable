@@ -65,8 +65,14 @@ export default function posts(state = intialPostState , action) {
                 return post;
             });
 
+            let currentPost = state.currentPost;
+            if(currentPost.id === action.postId) {
+                action.type === UPVOTE ? currentPost.voteScore++ : currentPost.voteScore--;                
+            }
+
             return{
                 ...state,
+                currentPost,
                 allPosts: newAllPosts,
             }
 
